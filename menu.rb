@@ -19,37 +19,37 @@ EASY_QUESTION_13 = "what\n(a)\t(b)\t(c)\t(d)"
 EASY_QUESTION_14 = "who?\n(a)\t(b)\t(c)\t(d)"
 EASY_QUESTION_15 = "what?\n(a)\t(b)\t(c)\t(d)"
 # All the questions in the intermediate
-INTERMEDIATE_QUESTION_1 =
-INTERMEDIATE_QUESTION_2 =
-INTERMEDIATE_QUESTION_3 =
-INTERMEDIATE_QUESTION_4 =
-INTERMEDIATE_QUESTION_5 =
-INTERMEDIATE_QUESTION_6 =
-INTERMEDIATE_QUESTION_7 =
-INTERMEDIATE_QUESTION_8 =
-INTERMEDIATE_QUESTION_9 =
-INTERMEDIATE_QUESTION_10 =
-INTERMEDIATE_QUESTION_11 =
-INTERMEDIATE_QUESTION_12 =
-INTERMEDIATE_QUESTION_13 =
-INTERMEDIATE_QUESTION_14 =
-INTERMEDIATE_QUESTION_15 =
+INTERMEDIATE_QUESTION_1 = "What?\n(a)\t(b)\t(c)\t(d)"
+INTERMEDIATE_QUESTION_2 = "What?\n(a)\t(b)\t(c)\t(d)"
+INTERMEDIATE_QUESTION_3 = "What?\n(a)\t(b)\t(c)\t(d)"
+INTERMEDIATE_QUESTION_4 = "What?\n(a)\t(b)\t(c)\t(d)"
+INTERMEDIATE_QUESTION_5 = "What?\n(a)\t(b)\t(c)\t(d)"
+INTERMEDIATE_QUESTION_6 = "What?\n(a)\t(b)\t(c)\t(d)"
+INTERMEDIATE_QUESTION_7 = "What?\n(a)\t(b)\t(c)\t(d)"
+INTERMEDIATE_QUESTION_8 = "What?\n(a)\t(b)\t(c)\t(d)"
+INTERMEDIATE_QUESTION_9 = "What?\n(a)\t(b)\t(c)\t(d)"
+INTERMEDIATE_QUESTION_10 = "What?\n(a)\t(b)\t(c)\t(d)"
+INTERMEDIATE_QUESTION_11 = "What?\n(a)\t(b)\t(c)\t(d)"
+INTERMEDIATE_QUESTION_12 = "What?\n(a)\t(b)\t(c)\t(d)"
+INTERMEDIATE_QUESTION_13 = "What?\n(a)\t(b)\t(c)\t(d)"
+INTERMEDIATE_QUESTION_14 = "What?\n(a)\t(b)\t(c)\t(d)"
+INTERMEDIATE_QUESTION_15 = "What?\n(a)\t(b)\t(c)\t(d)"
 # All the questions in the advanced
-DIFFICULT_QUESTION_1 =
-DIFFICULT_QUESTION_2 =
-DIFFICULT_QUESTION_3 =
-DIFFICULT_QUESTION_4 =
-DIFFICULT_QUESTION_5 =
-DIFFICULT_QUESTION_6 =
-DIFFICULT_QUESTION_7 =
-DIFFICULT_QUESTION_8 =
-DIFFICULT_QUESTION_9 =
-DIFFICULT_QUESTION_10 =
-DIFFICULT_QUESTION_11 =
-DIFFICULT_QUESTION_12 =
-DIFFICULT_QUESTION_13 =
-DIFFICULT_QUESTION_14 =
-DIFFICULT_QUESTION_15 =
+DIFFICULT_QUESTION_1 = "What?\n(a)\t(b)\t(c)\t(d)"
+DIFFICULT_QUESTION_2 = "What?\n(a)\t(b)\t(c)\t(d)"
+DIFFICULT_QUESTION_3 = "What?\n(a)\t(b)\t(c)\t(d)"
+DIFFICULT_QUESTION_4 = "What?\n(a)\t(b)\t(c)\t(d)"
+DIFFICULT_QUESTION_5 = "What?\n(a)\t(b)\t(c)\t(d)"
+DIFFICULT_QUESTION_6 = "What?\n(a)\t(b)\t(c)\t(d)"
+DIFFICULT_QUESTION_7 = "What?\n(a)\t(b)\t(c)\t(d)"
+DIFFICULT_QUESTION_8 = "What?\n(a)\t(b)\t(c)\t(d)"
+DIFFICULT_QUESTION_9 = "What?\n(a)\t(b)\t(c)\t(d)"
+DIFFICULT_QUESTION_10 = "What?\n(a)\t(b)\t(c)\t(d)"
+DIFFICULT_QUESTION_11 = "What?\n(a)\t(b)\t(c)\t(d)"
+DIFFICULT_QUESTION_12 = "What?\n(a)\t(b)\t(c)\t(d)"
+DIFFICULT_QUESTION_13 = "What?\n(a)\t(b)\t(c)\t(d)"
+DIFFICULT_QUESTION_14 = "What?\n(a)\t(b)\t(c)\t(d)"
+DIFFICULT_QUESTION_15 = "What?\n(a)\t(b)\t(c)\t(d)"
 # Fanontaniana amin'ny teny malagasy
 # Fanontaniana Mora
 FANONTANIANA_MORA_1 =
@@ -147,7 +147,7 @@ QUESTION_DIFFICILE_12 =
 QUESTION_DIFFICILE_13 =
 QUESTION_DIFFICILE_14 =
 QUESTION_DIFFICILE_15 =
-
+# Momban'ny siteweb
 Momba = {
     "VERSION" => "0.0.1",
     "AUTHOR" => "RajaomalalaSendra",
@@ -241,39 +241,39 @@ def EN
         Question.new(EASY_QUESTION_14, "c"),
         Question.new(EASY_QUESTION_15, "d")
     ]
-    intemediate_questions = [
-        Question.new(EASY_QUESTION_1, "a"),
-        Question.new(EASY_QUESTION_2, "c"),
-        Question.new(EASY_QUESTION_3, "d"),
-        Question.new(EASY_QUESTION_4, "a"),
-        Question.new(EASY_QUESTION_5, "d"),
-        Question.new(EASY_QUESTION_6, "c"),
-        Question.new(EASY_QUESTION_7, "a"),
-        Question.new(EASY_QUESTION_8, "c"),
-        Question.new(EASY_QUESTION_9, "d"),
-        Question.new(EASY_QUESTION_10, "a"),
-        Question.new(EASY_QUESTION_11, "d"),
-        Question.new(EASY_QUESTION_12, "c"),
-        Question.new(EASY_QUESTION_13, "a"),
-        Question.new(EASY_QUESTION_14, "c"),
-        Question.new(EASY_QUESTION_15, "d")
+    intermediate_questions = [
+        Question.new(INTERMEDIATE_QUESTION_1, "a"),
+        Question.new(INTERMEDIATE_QUESTION_2, "c"),
+        Question.new(INTERMEDIATE_QUESTION_3, "d"),
+        Question.new(INTERMEDIATE_QUESTION_4, "a"),
+        Question.new(INTERMEDIATE_QUESTION_5, "d"),
+        Question.new(INTERMEDIATE_QUESTION_6, "c"),
+        Question.new(INTERMEDIATE_QUESTION_7, "a"),
+        Question.new(INTERMEDIATE_QUESTION_8, "c"),
+        Question.new(INTERMEDIATE_QUESTION_9, "d"),
+        Question.new(INTERMEDIATE_QUESTION_10, "a"),
+        Question.new(INTERMEDIATE_QUESTION_11, "d"),
+        Question.new(INTERMEDIATE_QUESTION_12, "c"),
+        Question.new(INTERMEDIATE_QUESTION_13, "a"),
+        Question.new(INTERMEDIATE_QUESTION_14, "c"),
+        Question.new(INTERMEDIATE_QUESTION_15, "d")
     ]
     difficult_questions = [
-        Question.new(EASY_QUESTION_1, "a"),
-        Question.new(EASY_QUESTION_2, "c"),
-        Question.new(EASY_QUESTION_3, "d"),
-        Question.new(EASY_QUESTION_4, "a"),
-        Question.new(EASY_QUESTION_5, "d"),
-        Question.new(EASY_QUESTION_6, "c"),
-        Question.new(EASY_QUESTION_7, "a"),
-        Question.new(EASY_QUESTION_8, "c"),
-        Question.new(EASY_QUESTION_9, "d"),
-        Question.new(EASY_QUESTION_10, "a"),
-        Question.new(EASY_QUESTION_11, "d"),
-        Question.new(EASY_QUESTION_12, "c"),
-        Question.new(EASY_QUESTION_13, "a"),
-        Question.new(EASY_QUESTION_14, "c"),
-        Question.new(EASY_QUESTION_15, "d")
+        Question.new(DIFFICULT_QUESTION_1, "a"),
+        Question.new(DIFFICULT_QUESTION_2, "c"),
+        Question.new(DIFFICULT_QUESTION_3, "d"),
+        Question.new(DIFFICULT_QUESTION_4, "a"),
+        Question.new(DIFFICULT_QUESTION_5, "d"),
+        Question.new(DIFFICULT_QUESTION_6, "c"),
+        Question.new(DIFFICULT_QUESTION_7, "a"),
+        Question.new(DIFFICULT_QUESTION_8, "c"),
+        Question.new(DIFFICULT_QUESTION_9, "d"),
+        Question.new(DIFFICULT_QUESTION_10, "a"),
+        Question.new(DIFFICULT_QUESTION_11, "d"),
+        Question.new(DIFFICULT_QUESTION_12, "c"),
+        Question.new(DIFFICULT_QUESTION_13, "a"),
+        Question.new(DIFFICULT_QUESTION_14, "c"),
+        Question.new(DIFFICULT_QUESTION_15, "d")
     ]
     # About the software
     about = {
@@ -398,23 +398,84 @@ def EN
                 the_level(LEVEL[0])
                 while true
                     puts "Answer These 15 questions"
-                    run_test(easy_questions, 0)
-                        puts ("Do you want to play it again?(y/n)")
+                    # run test pour monter à un niveau
+                    answer = ""
+                    score = 0
+                    i = 0
+                    for question in easy_questions
+                        puts "The question ##{i + 1}"
+                        puts question.prompt
                         enter()
-                        playAgain = gets.chomp().to_s
-                        if playAgain == "y"
-                            puts("you want to do it again")
+                        answer = gets.chomp()
+                        if answer == question.answer
+                            score += 1
+                        end
+                        i += 1
+                    end
+                    puts ("You got #{score} / #{easy_questions.length()}")
+                    if score < 11
+                        while true
+                            puts ("Do you want to play it again?(y/n)")
+                            enter()
+                            playAgain = gets.chomp().to_s
+                            if playAgain == "y"
+                                puts("you want to do it again")
+                                break
+                            else
+                                puts ("Good bye see you next time :-).")
+                                return false
+                            end
+                        end   
+                    else
+                        puts("You are now in the intermediate level:-)")
+                        for question in intermediate_questions
+                            puts "The question ##{i + 1}"
+                            puts question.prompt
+                            enter()
+                            answer = gets.chomp()
+                            if answer == question.answer
+                                score += 1
+                            end
+                            i += 1
+                        end
+                        puts ("You got #{score} / #{intermediate_questions.length() * 2}")
+                        if score < 26
+                            while true
+                                puts ("Do you want to play it again?(y/n)")
+                                enter()
+                                playAgain = gets.chomp().to_s
+                                if playAgain == "y"
+                                    puts("you want to do it again")
+                                    break
+                                else
+                                    puts ("Good bye see you next time :-).")
+                                    return false
+                                end
+                            end 
                         else
-                            puts ("Good bye see you next time :-).")
-                            break
-                        end                    
+                            puts("Now you are in the last level :-)")
+                            run_test(difficult_questions, 30)
+                            puts("Congratulations You have done it!!:-)")
+                            while true
+                                puts ("Do you want to play it again or go  to the main menu?(y/n)")
+                                enter()
+                                playAgain = gets.chomp().to_s
+                                if playAgain == "y"
+                                    puts("you want to do it all again!!:-)")
+                                else
+                                    puts ("Return to the main menu.")
+                                    EN()
+                                end
+                            end 
+                        end
+                    end                              
                 end
 
             elsif your_level_default == LEVEL[1]
                 the_level(LEVEL[1])
                 while true
                     puts "Answer These 15 questions"
-                    break
+                    
                 end
             else
                 the_level(LEVEL[2])
@@ -430,7 +491,7 @@ def EN
             for key, val in about
                 puts "#{key} : #{val}"
             end 
-            break
+            EN()
         # To quit all the menu
         elsif menu == 4
             puts "Do you want really to quit?(y/n)"
@@ -438,13 +499,14 @@ def EN
             quit = gets.chomp.to_s
             if quit == "y"
                 puts "Successfully quit"
-                break
+                return false
             elsif quit == "n"
                 puts "Welcome back"
-                back("enter")            
+                back("enter")
+                EN()            
             else
                 puts "I don't know your choice\nSo I quit it by force"
-                break            
+                return false            
             end
         else
             puts "You must choose 1 or 2 or 3 or 4"
