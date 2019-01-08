@@ -8,16 +8,16 @@ EASY_QUESTION_2 = "Who is the first killer in the bible?\n(a)Adam\t(b)Abraham\t(
 EASY_QUESTION_3 = "What is the true name of Israel?\n(a)Esau\t(b)Ephraim\t(c)Joseph\t(d)Jacob"
 EASY_QUESTION_4 = "What is the name of the father of King Solomon?\n(a)King David\t(b)King Saul\t(c)Daniel\t(d)Jese"
 EASY_QUESTION_5 = "Who is the dreamer that becomes a pharaon's right hand?\n(a)Benjamin\t(b)Simeon\t(c)Reuben\t(d)Joseph"
-EASY_QUESTION_6 = "Who deliever Israel from Egypt?\t(a)Abraham\t(b)David\t(c)Moses\(d)Aaron"
-EASY_QUESTION_7 = "What?\n(a)\t(b)\t(c)\t(d)"
-EASY_QUESTION_8 = "Who?\n(a)\t(b)\t(c)\t(d)"
-EASY_QUESTION_9 = "what?\n(a)\t(b)\t(c)\t(d)"
-EASY_QUESTION_10 = "where?\n(a)\t(b)\t(c)\t(d)"
-EASY_QUESTION_11 = "what?\n(a)\t(b)\t(c)\t(d)"
-EASY_QUESTION_12 = "when?\n(a)\t(b)\t(c)\t(d)"
-EASY_QUESTION_13 = "what\n(a)\t(b)\t(c)\t(d)"
-EASY_QUESTION_14 = "who?\n(a)\t(b)\t(c)\t(d)"
-EASY_QUESTION_15 = "what?\n(a)\t(b)\t(c)\t(d)"
+EASY_QUESTION_6 = "Who deliever Israel from Egypt?\n(a)Abraham\t(b)David\t(c)Moses\(d)Aaron"
+EASY_QUESTION_7 = "Who is the first king of Israel?\n(a)King Saul\t(b)King David\t(c)King Solomon\t(d)"
+EASY_QUESTION_8 = "What is the name of the place that God separated the tounges?\n(a)Kanaan\t(b)Gomora\t(c)Babel\t(d)Egypt"
+EASY_QUESTION_9 = "What does mean Abraham?\n(a)the mother of the fews \t(b)father of fews\t(c)mother of the many\t(d)father of the many"
+EASY_QUESTION_10 = "what is the name of the sister of Joseph and Benjamin?\n(a)Dinah\t(b)Leah\t(c)Saray\t(d)Eve"
+EASY_QUESTION_11 = "who is the firstborn of Jacob?\n(a)Levi\t(b)Simeon\t(c)Gad\t(d)Reuben"
+EASY_QUESTION_12 = "what tribe can bring the offering to God?\n(a)Levi\t(b)Joseph\t(c)Benjamin\t(d)Simeon"
+EASY_QUESTION_13 = "who has bring the laws from the mountain of Sinaï?\n(a)Abraham\t(b)Jese\t(c)Moses\t(d)Aaron"
+EASY_QUESTION_14 = "what is the last book in the old testament?\n(a)Zechariah\t(b)Malacki\t(c)Nahum\t(d)Micah"
+EASY_QUESTION_15 = "what is the book that has a many chapter in the bible?\n(a)Psalm\t(b)Proverbs\t(c)Job\t(d)Deuternomy"
 # All the questions in the intermediate
 INTERMEDIATE_QUESTION_1 = "What?\n(a)\t(b)\t(c)\t(d)"
 INTERMEDIATE_QUESTION_2 = "What?\n(a)\t(b)\t(c)\t(d)"
@@ -149,12 +149,12 @@ QUESTION_DIFFICILE_14 =
 QUESTION_DIFFICILE_15 =
 # Momban'ny siteweb
 Momba = {
-    "VERSION" => "0.0.1",
+    "VERSION" => "0.0.1draft1",
     "AUTHOR" => "RajaomalalaSendra",
     "LICENCE" => "MIT Licence",
     "ABOUT" => "This is the first release of the software",
     "OS" => "Ubuntu 18.04 Beaver Linux",
-    "LANGUAGE" => "written in ruby 2.5.1",
+    "LANGUAGE" => "written in ruby 2.5.3",
     "COPYRIGHT" => "January 2019",
     "GAME" => "There are 3 levels
 Easy: 15 questions in the basic knowledge of bible
@@ -162,12 +162,12 @@ Intermediate: 15 questions in the intermediate knowledge of bible
 Difficult: 15 questions in the difficult knowledge of bible"
 }
 Apropos = {
-    "VERSION" => "0.0.1",
+    "VERSION" => "0.0.1draft1",
     "AUTHOR" => "RajaomalalaSendra",
     "LICENCE" => "MIT Licence",
     "ABOUT" => "This is the first release of the software",
     "OS" => "Ubuntu 18.04 Beaver Linux",
-    "LANGUAGE" => "written in ruby 2.5.1",
+    "LANGUAGE" => "written in ruby 2.5.3",
     "COPYRIGHT" => "January 2019",
     "GAME" => "There are 3 levels
 Easy: 15 questions in the basic knowledge of bible
@@ -236,9 +236,9 @@ def EN
         Question.new(EASY_QUESTION_9, "d"),
         Question.new(EASY_QUESTION_10, "a"),
         Question.new(EASY_QUESTION_11, "d"),
-        Question.new(EASY_QUESTION_12, "c"),
-        Question.new(EASY_QUESTION_13, "a"),
-        Question.new(EASY_QUESTION_14, "c"),
+        Question.new(EASY_QUESTION_12, "a"),
+        Question.new(EASY_QUESTION_13, "c"),
+        Question.new(EASY_QUESTION_14, "b"),
         Question.new(EASY_QUESTION_15, "d")
     ]
     intermediate_questions = [
@@ -474,17 +474,72 @@ def EN
             elsif your_level_default == LEVEL[1]
                 the_level(LEVEL[1])
                 while true
+                    score = 15
+                    i = 15
                     puts "Answer These 15 questions"
-                    
+                    puts("You are now in the intermediate level:-)")
+                        for question in intermediate_questions
+                            puts "The question ##{i + 1}"
+                            puts question.prompt
+                            enter()
+                            answer = gets.chomp()
+                            if answer == question.answer
+                                score += 1
+                            end
+                            i += 1
+                        end
+                        puts ("You got #{score} / #{intermediate_questions.length() * 2}")
+                        if score < 26
+                            while true
+                                puts ("Do you want to play it again?(y/n)")
+                                enter()
+                                playAgain = gets.chomp().to_s
+                                if playAgain == "y"
+                                    puts("you want to do it again")
+                                    break
+                                else
+                                    puts ("Good bye see you next time :-).")
+                                    return false
+                                end
+                            end 
+                        else
+                            puts("Now you are in the last level :-)")
+                            run_test(difficult_questions, 30)
+                            puts("Congratulations You have done it!!:-)")
+                            while true
+                                puts ("Do you want to play it again or go  to the main menu?(y/n)")
+                                enter()
+                                playAgain = gets.chomp().to_s
+                                if playAgain == "y"
+                                    puts("you want to do it all again!!:-)")
+                                else
+                                    puts ("Return to the main menu.")
+                                    EN()
+                                end
+                            end
+                        end
                 end
             else
                 the_level(LEVEL[2])
                 while true
+                    score = 30
                     puts "Answer These 15 questions"
-                    break
+                    puts("Now you are in the last level :-)")
+                        run_test(difficult_questions, 30)
+                        puts("Congratulations You have done it!!:-)")
+                        while true
+                            puts ("Do you want to play it again or go  to the main menu?(y/n)")
+                            enter()
+                            playAgain = gets.chomp().to_s
+                            if playAgain == "y"
+                                puts("you want to do it all again!!:-)")
+                            else
+                                puts ("Return to the main menu.")
+                                EN()
+                            end
+                        end
                 end
             end
-            break
         # To get a help
         elsif menu == 3
             puts "Welcome to the Help"
@@ -954,6 +1009,7 @@ end
 # Execution of all menu in all languages
 while true
     your_language_default = LANGUE[2]
+    your_level_default = LEVEL[0]
     if your_language_default == LANGUE[0]
         MG()
         break
