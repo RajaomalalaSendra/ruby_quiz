@@ -3,7 +3,8 @@
 LEVEL = ["Easy","Intermediate","Difficult"]
 LANGUE = ["Malagasy", "Français", "English", "Nihongo", "German"]
 # All the questions in the easy
-EASY_QUESTION_1 = "What is the first book in the bible?\n(a)Genesis\t(b)Exode\t(c)Psalm\t(d)Proverbs"
+EASY_QUESTION_1 = "What is the first book in the bible?
+(a)Genesis\t(b)Exode\t(c)Psalm\t(d)Proverbs"
 EASY_QUESTION_2 = "Who is the first killer in the bible?\n(a)Adam\t(b)Abraham\t(c)Abel\t(d)Isaac"
 EASY_QUESTION_3 = "What is the true name of Israel?\n(a)Esau\t(b)Ephraim\t(c)Joseph\t(d)Jacob"
 EASY_QUESTION_4 = "What is the name of the father of King Solomon?\n(a)King David\t(b)King Saul\t(c)Daniel\t(d)Jese"
@@ -147,33 +148,6 @@ QUESTION_DIFFICILE_12 =
 QUESTION_DIFFICILE_13 =
 QUESTION_DIFFICILE_14 =
 QUESTION_DIFFICILE_15 =
-# Momban'ny siteweb
-Momba = {
-    "VERSION" => "0.0.1draft1",
-    "AUTHOR" => "RajaomalalaSendra",
-    "LICENCE" => "MIT Licence",
-    "ABOUT" => "This is the first release of the software",
-    "OS" => "Ubuntu 18.04 Beaver Linux",
-    "LANGUAGE" => "written in ruby 2.5.3",
-    "COPYRIGHT" => "January 2019",
-    "GAME" => "There are 3 levels
-Easy: 15 questions in the basic knowledge of bible
-Intermediate: 15 questions in the intermediate knowledge of bible
-Difficult: 15 questions in the difficult knowledge of bible"
-}
-Apropos = {
-    "VERSION" => "0.0.1draft1",
-    "AUTHOR" => "RajaomalalaSendra",
-    "LICENCE" => "MIT Licence",
-    "ABOUT" => "This is the first release of the software",
-    "OS" => "Ubuntu 18.04 Beaver Linux",
-    "LANGUAGE" => "written in ruby 2.5.3",
-    "COPYRIGHT" => "January 2019",
-    "GAME" => "There are 3 levels
-Easy: 15 questions in the basic knowledge of bible
-Intermediate: 15 questions in the intermediate knowledge of bible
-Difficult: 15 questions in the difficult knowledge of bible"
-}
 # Our One class Question
 class Question
     attr_accessor :prompt, :answer
@@ -626,6 +600,20 @@ def MG
         Question.new(EASY_QUESTION_14, "c"),
         Question.new(EASY_QUESTION_15, "d")
     ]
+    # Momban'ny siteweb
+    Momba = {
+        "VERSION" => "0.0.1draft1",
+        "AUTHOR" => "RajaomalalaSendra",
+        "LICENCE" => "MIT Licence",
+        "ABOUT" => "This is the first release of the software",
+        "OS" => "Ubuntu 18.04 Beaver Linux",
+        "LANGUAGE" => "written in ruby 2.5.3",
+        "COPYRIGHT" => "January 2019",
+        "GAME" => "There are 3 levels
+    Easy: 15 questions in the basic knowledge of bible
+    Intermediate: 15 questions in the intermediate knowledge of bible
+    Difficult: 15 questions in the difficult knowledge of bible"
+    }
     puts "Tafiditra amin'ny teny Malagasy ianao"
     while true
         # Menu in the enter
@@ -763,7 +751,7 @@ def MG
         # To get a help
         elsif menu == 3
             puts "Welcome to the Help"
-            for key, val in about
+            for key, val in Momba
                 puts "#{key} : #{val}"
             end 
             break
@@ -845,6 +833,19 @@ def FR
         Question.new(EASY_QUESTION_14, "c"),
         Question.new(EASY_QUESTION_15, "d")
     ]
+    Apropos = {
+        "VERSION" => "0.0.1draft1",
+        "AUTHOR" => "RajaomalalaSendra",
+        "LICENCE" => "MIT Licence",
+        "ABOUT" => "This is the first release of the software",
+        "OS" => "Ubuntu 18.04 Beaver Linux",
+        "LANGUAGE" => "written in ruby 2.5.3",
+        "COPYRIGHT" => "January 2019",
+        "GAME" => "There are 3 levels
+    Easy: 15 questions in the basic knowledge of bible
+    Intermediate: 15 questions in the intermediate knowledge of bible
+    Difficult: 15 questions in the difficult knowledge of bible"
+    }
     puts "Vous êtes dans la version française"
     while true
         # Menu in the enter
@@ -982,7 +983,7 @@ def FR
         # To get a help
         elsif menu == 3
             puts "Welcome to the Help"
-            for key, val in about
+            for key, val in Apropos
                 puts "#{key} : #{val}"
             end 
             break
